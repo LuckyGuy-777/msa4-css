@@ -1,0 +1,54 @@
+html{
+  font-size: 100px;
+}
+
+/* 폰트 지정 */
+/* body {
+  font-family: "돋움", "맑은고딕","굴림";
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet'); */
+body {
+  /* font-family: "돋움", "맑은고딕","굴림"; */
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* 폰트 크기 */
+.p-font-size {
+  /* px : 픽셀단위로 폰트 크기조정을 함. */
+  /* font-size: 100px */
+
+
+  /*  em: 부모 요소의 글자크기 기준 배율로 폰트 크기 조정 */
+  /* font-size: 2em; */
+
+  /*  rem: 최상위 요소의 글자크기 기준 배율로 폰트 크기 조절 */
+  /* em과 rem 의 차이는, 어떤 요소를 기준으로 배율 차이를 나누는가 */
+  
+  /* 최상위 요소인 html태그를 기준으로 폰트크기가 조정됨 */
+  /* html 태그를 대상으로 적용됨. */
+  /*  보통 16픽셀 그대로 사용함.  */
+  font-size: 1rem;
+}
+
+
+
+div {
+  font-size: 30px;
+}
+
+/* 부모요소를 기준으로 움직임 */
+/* 부모요소인 div의 크기의 2배 크기로 설정됨 */
+.p-font-size2{
+ 
+}
+
+.p-font-weight{
+  /* 폰트 굵기 : 100 ~ 900을 설정가능. */
+  font-weight: 600;
+}
+
+
