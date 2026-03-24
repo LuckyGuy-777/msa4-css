@@ -1,0 +1,81 @@
+.bg-box{
+  background-color: cornflowerblue;
+  width: 200px;
+  height: 200px;
+
+  padding: 10px;
+  border: 10px dotted #000;
+
+  /* 배경색의 적용 범위를 지정함. */
+  /* content-box 내가 실제로 출력한 컨텐츠 까지, padding-box 패딩까지
+   ,border-box : 외곽선 까지 배경이 들어감 
+   f12 눌러서 검사 창의 style-> contents는 컨텐츠 창에, padding은 패딩 부분까지
+   border은, 보더부분까지, margin부분은, margin 부분까지.
+   */
+  background-clip: content-box;
+}
+
+
+/* 컨텐츠가 없으면 표시되지 않음. */
+/* 그래서, 크기를 줘야함.  */
+.bg-img{
+
+  /* cat1.jpg가 없으면, cat2.jpg가 띄워짐 */
+  background-image: url("./cat1.jpg"), url("./cat2.jpg");
+  width: 700px;
+  height: 400vh;
+
+  /* fixed로 설정시, 스크롤을 이동해도, 배경이미지가 고정됨. */
+  background-attachment: fixed;
+
+  /* 배경이미지 설정. 기본크기는 auto */
+
+  /* contain은, 요소안에 배경이미지가 다 들어오도록 확대함. 
+  확대를 하다가 무한정 크게 할수는 없으니, 화면크기에 맞게 이미지가
+  잘릴수 있음.  잘안쓰인다고 함. */
+
+  /* cover을 자주쓴다고함. 사진이 한쪽이 딱 맞아야 함. 사진이 한장만
+  페이지에 보이게 함. 기본적으로 이미지크기는, cover을 사용함.*/
+
+  /* 배경이미지의 크기를 설정함 */
+  background-size: cover;
+
+  /* "배경이미지의 반복 방법 지정". 기본설정은 initial. 일반적인
+  바둑판 형식으로 반복  */
+  /* repeat-x, repeat-y 형식으로 사용가능  
+  보통 no-repeat를 사용한다고 함.*/
+  background-repeat: no-repeat;
+
+  
+  /* 배경이미지의 초기위치를 지정함. */
+  background-position:  -200px  mm 50px;
+
+  /* 보통, 이미지 넣고, 크기지정하고
+   -size, -repeat, -position을 한꺼번에 사용함 */
+}
+
+.gradation{
+  width: 200px;
+  height: 200px;
+
+  /* linear-gradient(); 선형 그라데이션 */
+  /* 시작색, 끝색을 이용해서 표현할수있음 */
+  /* to bottom 밑에서 위로, to left ... */
+  /* 보통은, 각도를 줌. 수치deg */
+  /* 시작색,중간색,끝색 형식으로도 주어질수 있음. */
+  /* %는 위치를 의미함  50%는 시작에서 50%만큼 시작색이 차지하고
+  그 다음색 부터 색의 순서가 진행됨.
+  */
+  /* background: linear-gradient(#fff 50%, #ed6464 70%, #000); */
+
+
+
+  /* 원형그라데이션 효과부여 
+  radial-gradient()
+  at 에 수치% 수치% 를 주면, 그 위치에서 색이 시작함
+  색을 3개까지 줄수 있음
+  시작색, 중간색, 끝색 순으로..
+  */
+  background: radial-gradient(circle at 20% 0%,#fff,#000);
+
+}
