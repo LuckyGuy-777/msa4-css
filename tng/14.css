@@ -1,0 +1,50 @@
+.form_title{
+  color: pink;
+}
+
+.star::before{
+  content: "*";
+  color: red;
+}
+
+/* .form_image{
+  background-image: url("president_trump.jpg");
+  background-size: 200px;
+  background-position: right;
+  background-repeat: no-repeat;
+  opacity: 70;
+} */
+
+/* input 태그의, 택스트창 클릭시, 테두리 색상 변경 */
+input:focus{
+  outline: 3px solid red;
+}
+
+textarea:focus{
+  outline: 3px solid red;
+}
+
+button[type="submit"]{
+  position: relative;
+  cursor: pointer;
+}
+
+button:hover::after{
+  content: "내용을 다시 한 번 확인해주세요";
+  position:absolute;
+  left: 105%;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 15px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+fieldset{
+   background-image: url("president_trump.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 80;
+}

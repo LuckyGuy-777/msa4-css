@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+
+  /* 외곽선 */
+  box-sizing: border-box;
+}
+
+fieldset{
+  /* 폼 안의, 요소들 간의 여백 */
+  padding: 0 10px 10px;
+}
+
+legend{
+  font-size: 25px;
+  color: aqua;
+}
+
+.container{
+
+  /* 쌍따옴표 있어야 이미지출력됨 */
+  background-image: url("../edu/cat1.jpg");
+  /* 이미지 반복설정 사용 x*/
+  background-repeat: no-repeat;
+
+  /* width,height 중, 짧은쪽을 늘려서 배경화면으로 사용한다. */
+  background-size: cover;
+
+  /* 이미지 중앙에 오게끔 */
+  background-position: center;
+}
+
+
+input, textarea{
+
+  /* 배경이미지를, 투명하게*/
+  background-color: transparent;
+  outline: none;
+}
+
+input:focus, textarea:focus{
+  border: 3px solid red;
+}
+
+
+/* 이름, 나이, 성별 앞의 별 모양 */
+.required-category::before{
+
+  content: "*";
+  color: red;
+}
+
+
+.vertical-align-top{
+  vertical-align: top;
+}
+
+/* 속성선택자. input의 type 이, 체크되었을때, label에 대해. */
+input[type="radio"]:checked + label{
+  color: red;
+}
+
+.btn-send{
+  position: relative;
+}
+
+
+/* 가상요소로, 버튼 태그의, 스타일을 줌. */
+/* 버튼태그 안에 가상요소가 생김. */
+/* 가상요소를 hover와 after로 줌. */
+.btn-send:hover::after{
+  content: "내용을 다시 한 번 확인해 주세요";
+  background-color: black;
+  color: white;
+  font-size: 20px;
+
+  /* 기준점을, (부모태그)버튼태그로 지정하기 위해서, 버튼태그에 relative 지정. */
+  /* relative를 기준점으로 따라감. */
+  position: absolute;
+
+  bottom: 0;
+  right: -280px;
+
+}

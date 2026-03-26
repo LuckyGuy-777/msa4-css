@@ -1,0 +1,15 @@
+/* 가상요소 :  */
+
+/* 특정요소의 컨텐츠 뒤에 다른요소를 삽입 */
+.required-star::after{
+  content: "*";
+  color: green;
+}
+
+
+/*  마우스가 올라가면, 내용을 표시 */
+.input-hover:hover::after{
+  content: "&";
+  position: fixed;
+  top: 0;
+}
