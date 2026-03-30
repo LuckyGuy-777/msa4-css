@@ -1,0 +1,59 @@
+
+/* 아이템들의 배치는, 부모영역이 한다. */
+
+
+
+/*  컨테이너의, 스타일적용 대상은, row-box 클래스 들임. */
+.container{
+  width: 500px;
+  height: 800px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column; /* 주축을 세로로 배치 */
+  padding: 10px;
+  gap: 10px;
+}
+
+/* item들을 대상으로하는, 스타일. item클래스들의 부모 클래스 */
+.row-box {
+  background-color: bisque;
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+/* 
+.row-box2 {
+  background-color: greenyellow;
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.row-box3 {
+  background-color: goldenrod;
+  flex: 1;
+  display: flex;
+  gap: 10px;
+} */
+
+.item{
+  background-color: cadetblue;
+  border: 1px solid black;
+  flex:1
+}
+
+
+/* 5번 6번 아이템을 대상으로 하는 스타일을가진, 부모클래스 */
+.nested-box{
+  flex:1;
+  /* 부모의 공간을, 자식요소들이 나눠가지도록 함. */
+  display: flex; 
+  /* 주축방향을 세로로. */
+  flex-direction: column;
+  /* 요소 간의 공간을 10px만큼. */
+  gap: 10px;
+}
+
+/* .nested-box > :first-child{
+  flex:2;
+} */
