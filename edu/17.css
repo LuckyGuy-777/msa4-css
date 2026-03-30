@@ -1,0 +1,113 @@
+*{
+
+}
+
+.container{
+  margin : auto;
+  padding: 10px;
+  background-color: antiquewhite;
+  /* width: 450px; */
+  height: 450px;
+  /* 부모요소에 flex 요소 지정 */
+  display: flex;
+
+  /* flex-direction: 주축 방향을 정하는 속성 (defalut: row) */
+  flex-direction: row;
+
+  /* 아이템들 간의 간격을 조정하는 속성임. */
+  gap: 20px;
+
+
+
+  /* 줄바꿈 속성. 줄바꿈 여부를 지정할수 있다. */
+  /* no-wrap이 default 값임. */
+  /* 아이템이 들어갈 공간이 부족할떄, 자동으로 개행되서 
+  아이템이 들어감 */
+  /* 대부분의 상황에서 주어짐. 레이아웃 배치할때. */
+  /* flex-wrap: wrap; */
+
+
+  /* flex-flow:  flex-direction과, flex-wrap을 한번에 지정하는 속성이다. */
+  /* flow-direction, flex-wrap 순으로 주어짐. */
+  /* flex-flow: column nowrap;  */
+
+  
+  /* justify-content :  "주축 기준으로 아이템들을 정렬하는 방법"을 지정하는 속성임. */
+  /* flex-start 가 기본값임.  시작점을 기준으로 바짝 붙임. */
+  /* 시작점은, 페이지의 왼쪽 상단. 주축은 오른쪽 상단 교차축은, 시작점의 아래쪽 방향 */
+  /* flex-end 는 끝점을 기준으로 바짝붙임. */
+  /* flex-center는, 중앙을 기준으로 붙인다. */
+
+  /* 아래의 3개를 현업에서 많이 쓴다고함. */
+  /* space-between "주축의 시작점과 끝점에, 아이템들을 바짝붙인다." 남은공간을 아이템들이 적절히 띄운다*/
+  /* 일단 시작점과 끝점을 기준으로 바짝 붙이는 속성이다.  padding과 margin 속성에 따라 달리 나올수도 있다.*/
+  /* space-around 부모와 아이템들의 간격과, 아이템과 아이템의 간격을 1:2비율로 나눈다. */
+  /* space-evenly : 적절하게 공간을 나눠가짐 아이템 간에 간격을, 1:1:1로 나눠가지려고 노력하게 하는 속성*/
+  justify-content: space-evenly;
+
+
+
+
+  /* align-items: "교차축" 기준으로, "단일 라인을 정렬하는 방법"을 지정하는 속성 */
+  /* 기본이 stretch 상태. flex-end, flex-start, baseline*/
+  align-items: flex-start;
+
+}
+
+.container2{
+  margin: auto;
+  padding: 10px;
+  background-color: rgb(159, 101, 25);
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  /* center 속성도 사용가능. 중간에 위치시킴. */
+  justify-content: center;
+
+    /* align-items: "교차축" 기준으로, "단일 라인을 정렬하는 방법"을 지정하는 속성 */
+  /* align-items: flex-end; */
+
+
+  /* align-content: 교차축 기준으로 여러라인을 정렬하는 방법을 지정함. */
+  /* align-items와 같이 쓰지는 않음. 섞이기 때문임. */
+  /* align-content: center; 덩어리로 한꺼번에 중간으로 움직임 */
+  /* align-content: space-evenly : 부모속성값, 아이템간의 거리를 적절하게 띄움 */
+  align-content: flex-end;
+}
+
+.item{
+  /*  flex-basis: 아이템들의 기본크기를 지정하는 속성임. */
+  /* flex-basis를 고정크기로 적용시키려면, flex-grow를 0으로 적용시켜야함. */
+  flex-basis: auto;
+
+  /* flex-grow: 빈공간이 생겼을떄, 얼마만큼 더 커질지 결정하는 속성 */
+  /* flex-grow는 비율을 설정하는 성격을 띔.  */
+  /* 주어지는 숫자는 비율이라고 생각하면됨. 1은 1배, 2는 2배 .... */
+  /* flex-basis의 크기가 적용되어있고, flex-grow가 적용되어있으면 */
+  /* flex-grow 값만 적용됨. */
+  /* flex-grow: 1; */
+
+
+  /* flex-shrink: 공간이 부족할때, 얼마나 더 줄어들지 결정하는 속성 */
+  /* grow 처럼 비율임. 기본값1 */
+  /* flex-shrink: 1; */
+
+
+  /* flex: flex-grow, flex-shrink, flex-basis를 한번에 작성하는 속성으로,
+  사실상 실무에서 권장되는 방법이다. */
+  /* 순서대로, grow, shrink, basis 이다. */
+  flex: 1 1 0;
+  
+
+  width: 150px;
+  height: 150px; 
+  background-color: cadetblue;
+  border: 1px solid black
+
+
+
+
+}
