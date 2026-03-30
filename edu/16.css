@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+div{
+  width: 300px;
+  height: 300px;
+  background-color: burlywood;
+}
+
+/* 최소 600픽셀부터, 아래의 스타일 적용(가로) */
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  div{
+    background-color: red;
+  }
+}
+
+
+/* 최소 1200px 부터 아래의 스타일 적용(가로 기준) */
+@media (min-width: 1200px){
+  div{
+    background-color: aquamarine;
+    color: green;
+    font-size: 36px;
+  }
+}
+
+
+/* height 가 적용되면, width는 적용이 안될수 있음.  */
+@media (min-height: 600px){
+
+  div{
+    text-align: center;
+    line-height: 300px;
+    background-color: blue;
+  }
+}
