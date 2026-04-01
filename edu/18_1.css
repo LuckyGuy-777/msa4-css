@@ -1,0 +1,13 @@
+.container{
+  display: grid;
+  width: 450px;
+  height: 500px;
+  background-color: gray;
+}
+
+/* 열은, 위에서 아래 */
+/* 행은 가로(몇번째 가로선이냐) */
+
+.item{
+  
+}

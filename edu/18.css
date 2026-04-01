@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  padding: 5px;
+  /* width: 400px; */
+  background-color: grey;
+  display: grid;
+
+  /* 컬럼의 개수와 너비를 지정해야함 */
+  /* grid 시스템은 각각의 아이템들 간의 비율을 의미함. */
+  /* 고정으로 크기를 가져가고 싶다면, 고정크기를줄수 있음. 남아있는 공간에서 비율대로 요소들이 크기를 가져감. */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+
+  /* 반복되는 크기를 반복할수 있음. 각, 개수, 크기 또는 비율 을 주는자리. */
+  /* 1fr을 3개 만들수 있음. */
+  /* grid-template-columns: repeat(3,1fr); */
+
+
+  /* 행의 개수와 너비를 지정함. */
+  /* 현업에서는 row까지는 잘 지정하지 않음. */
+  /* grid-template-rows: 100px 50px 1fr; */
+
+
+  /* auto-fit, auto-fill */
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  
+  
+  /* 아이템들 간의 간격을 조절할때는 gap을 사용함 */
+  /* 개발자모드의, grid 부분을 마우스에 올리면 확인가능 */
+  gap: 10px; 
+}
+
+.item{
+  border: 1px solid black;
+  background-color: skyblue;
+}
+
+/* 아이템을 제일 작은걸 기준으로 row를 나누어라 */
+/*  */
+
+/* 개발자모드, grid부분을 확인하면, 격자모양이 만들어짐. */
+.container3{
+  padding: 10px;
+  background-color: gray;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6,50px);
+  gap: 10px;
+
+}
+
+/* 아이템에 작성하는 속성 */
+/* 라인번호에 의해 움직이게 됨. */
+.row-span-2{
+
+  /* row의 시작라인 번호 /(슬러시) 끝라인번호  */
+  /* 줄을(아래방향) 기준으로 공간을 차지하게한다. */
+  /* 모든게 줄 수를 기준으로 늘어난다. 줄의 시작은, 1 바로위에서 시작이다. */
+  /* grid-row: 1 / 3; */
+
+
+  /* col의 시작라인 번호는, 왼편 모서리에 위치해서 시작한다. */
+
+
+  /* 1번라인에서 시작해, row 방향으로, 셀을 2칸쓰겠다 */
+  /* row 3이면, 3번째 가로선. */
+  /* row, col을 n번째선 이라고 생각하면 편하다. */
+  grid-row: span 2;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.row-span-3{
+  
+  /* grid-row: 1/7; 와,  */
+}
